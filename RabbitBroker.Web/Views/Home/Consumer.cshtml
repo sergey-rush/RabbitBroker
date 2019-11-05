@@ -1,0 +1,47 @@
+﻿@using RabbitBroker.Web.Code
+@model RabbitBroker.Web.Models.DataModel
+
+@{
+    ViewData["Title"] = "Consumer";
+}
+
+<section>
+    <h1 class="display-4">Consumer</h1>
+</section>
+
+<section>
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">UniqueId</th>
+            <th scope="col">Message</th>
+            <th scope="col">Created</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        @{
+            int counter = 1;
+            foreach (Message item in @Model.Messages)
+            {
+                <tr>
+                    <th scope="row">@counter</th>
+                    <td>@item.UniqueId.ToString("D")</td>
+                    <td>@item.Info</td>
+                    <td>@item.Created</td>
+                </tr>
+                counter++;
+            }
+        }
+
+        </tbody>
+    </table>
+</section>
+
+
+@section Scripts {
+
+
+}

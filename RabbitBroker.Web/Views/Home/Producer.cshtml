@@ -1,0 +1,27 @@
+﻿@model RabbitBroker.Web.Models.DataModel
+
+@{
+    ViewData["Title"] = "Producer";
+}
+
+<section>
+    <h1 class="display-4">Producer</h1>
+</section>
+
+<section>
+    <form method="post">
+        <div class="form-group">
+            <label for="inputInfo">Any text you like to send</label>
+            <input type="text" class="form-control" id="inputInfo" asp-for="@Model.SelectedMessage.Info" aria-describedby="inputInfoHelp" placeholder="Enter any text">
+            <small id="inputInfoHelp" class="form-text text-muted">Enter any text you like to send to queue</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</section>
+
+
+
+@section Scripts {
+
+
+}
