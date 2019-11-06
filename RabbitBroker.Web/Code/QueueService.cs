@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using RabbitBroker.Core;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 

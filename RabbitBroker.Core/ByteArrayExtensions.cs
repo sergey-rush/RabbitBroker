@@ -2,7 +2,7 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace RabbitBroker.Web.Code
+namespace RabbitBroker.Core
 {
     public static class ByteArrayExtensions
     {

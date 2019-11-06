@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RabbitBroker.Web.Code
+namespace RabbitBroker.Core
 {
     [Serializable]
     public class Message

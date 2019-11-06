@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitBroker.Web", "RabbitBroker.Web\RabbitBroker.Web.csproj", "{2C8DB9B7-4359-43F9-AB80-45BF738A90CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitBroker.Console", "RabbitBroker.Console\RabbitBroker.Console.csproj", "{6CD04CDF-A9E6-491D-B8D2-EFB60565F519}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitBroker.Core", "RabbitBroker.Core\RabbitBroker.Core.csproj", "{F85E227E-9EC7-42F0-B5BA-2C51BA88B0C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{2C8DB9B7-4359-43F9-AB80-45BF738A90CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C8DB9B7-4359-43F9-AB80-45BF738A90CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C8DB9B7-4359-43F9-AB80-45BF738A90CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CD04CDF-A9E6-491D-B8D2-EFB60565F519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD04CDF-A9E6-491D-B8D2-EFB60565F519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD04CDF-A9E6-491D-B8D2-EFB60565F519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD04CDF-A9E6-491D-B8D2-EFB60565F519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F85E227E-9EC7-42F0-B5BA-2C51BA88B0C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F85E227E-9EC7-42F0-B5BA-2C51BA88B0C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F85E227E-9EC7-42F0-B5BA-2C51BA88B0C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F85E227E-9EC7-42F0-B5BA-2C51BA88B0C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

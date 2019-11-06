@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using RabbitBroker.Core;
 
 namespace RabbitBroker.Web.Code
 {
