@@ -1,20 +1,19 @@
-﻿using System;
-using System.Text;
-using RabbitBroker.Core;
+﻿using RabbitBroker.Core;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-namespace RabbitBroker.Console
+namespace RabbitBroker.Warn
 {
     class Program
     {
         static void Main(string[] args)
         {
+            string queueName = LogType.Warn.ToString();
             var factory = new ConnectionFactory() { HostName = "localhost" };
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                channel.QueueDeclare(queue: "info",
+                channel.QueueDeclare(queue: queueName,
                     durable: false,
                     exclusive: false,
                     autoDelete: false,
@@ -25,9 +24,10 @@ namespace RabbitBroker.Console
                 {
                     var body = ea.Body;
                     Message message = body.FromByteArray<Message>();
-                    System.Console.WriteLine("UniqueId: {0} Info: {1} Created: {2:F}", message.UniqueId, message.Info, message.Created);
+                    System.Console.WriteLine("UniqueId: {0} Info: {1} Created: {2:F}", message.UniqueId, message.Info,
+                        message.Created);
                 };
-                channel.BasicConsume(queue: "info",
+                channel.BasicConsume(queue: queueName,
                     autoAck: true,
                     consumer: consumer);
 
