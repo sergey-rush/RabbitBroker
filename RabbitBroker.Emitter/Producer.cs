@@ -37,22 +37,27 @@ namespace RabbitBroker.Emitter
                 arguments: null);
         }
 
-        public void Emit()
+        public void Emit(int id)
         {
             int index = random.Next(0, events.Count);
             LogType logType = (LogType) index;
             var entry = events[logType];
             Message message = new Message();
+            message.Id = id;
+            message.UserId = 1;
+            message.Amount = (decimal) 1;//random.NextDouble();
             message.Info = entry;
 
             var body = message.ToByteArray();
+            //string routingKey = logType.ToString();
+            string routingKey = "Pay";
 
             channel.BasicPublish(exchange: "",
-                routingKey: logType.ToString(),
+                routingKey: routingKey,
                 basicProperties: null,
                 body: body);
 
-            Console.WriteLine("Emitted {0}", logType.ToString());
+            Console.WriteLine("Emitted {0} {1}", logType.ToString(), id);
         }
     }
 }

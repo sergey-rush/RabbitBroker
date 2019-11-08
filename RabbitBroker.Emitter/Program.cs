@@ -15,10 +15,10 @@ namespace RabbitBroker.Emitter
             Producer producer = new Producer();
             Stopwatch sw = new Stopwatch();
             sw.Start();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 100000; i++)
             {
-                producer.Emit();
-                //Thread.Sleep(300);
+                producer.Emit(i);
+                //Thread.Sleep(1);
             }
             sw.Stop();
 

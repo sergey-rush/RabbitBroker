@@ -19,6 +19,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\RabbitBroker.Core\RabbitBroker.Core.csproj" />
+      <ProjectReference Include="..\RabbitBroker.Data\RabbitBroker.Data.csproj" />
     </ItemGroup>
 
 </Project>

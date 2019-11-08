@@ -35,7 +35,7 @@ namespace RabbitBroker.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Producer(DataModel dataModel)
+        public async Task<ActionResult> Producer(DataModel dataModel)
         {
             queueService.SendMessage(dataModel.SelectedMessage);
 
@@ -45,7 +45,7 @@ namespace RabbitBroker.Web.Controllers
         public IActionResult Consumer()
         {
             DataModel dataModel = new DataModel();
-            dataModel.Messages = queueService.GetMessages();
+            dataModel.Messages = queueService.GetMessages(100).ToList();
             return View(dataModel);
         }
 
